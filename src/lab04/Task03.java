@@ -13,17 +13,16 @@ public class Task03 {
         // Заполняем случайными баллами (например, от 40 до 100)
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < 5; j++) {
-                students[i][j] = 40 + rnd.nextInt(61);
+                students[i][j] = rnd.nextInt(0, 100);
             }
         }
 
-        System.out.println("=== Исходный список студентов ===");
+        System.out.println("Исходный список студентов");
         printStudents(students);
 
-        // Сортировка прямым включением по убыванию
         Sorters.insertionSortStudentsDesc(students);
 
-        System.out.println("\n=== После сортировки (по убыванию суммы) ===");
+        System.out.println("\nПосле сортировки (по убыванию суммы)");
         printStudents(students);
     }
 

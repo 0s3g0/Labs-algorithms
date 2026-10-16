@@ -3,10 +3,10 @@ package lab04;
 public class Printer {
 
     public static void testAllSorters(String testName, int[] original) {
-        System.out.println("\n=== Состояние: " + testName + " (размер: " + original.length + ") ===");
-        System.out.printf("%-15s | %-12s | %-12s | %-12s | %-15s\n",
-                "Алгоритм", "Итерации", "Сравнения", "Перестановки", "Время (нс)");
+        System.out.println("Состояние: " + testName);
         System.out.println("-----------------------------------------------------------------------------");
+        System.out.printf("%-15s | %-12s | %-12s | %-12s | %-15s\n",
+                "Алгоритм", "Итерации", "Сравнения", "Перестановки", "Время");
 
         // 1. Прямое включение (вставки)
         SortMetrics m1 = Sorters.insertionSort(original.clone());
@@ -23,6 +23,8 @@ public class Printer {
         // 4. Быстрая (Хоара)
         SortMetrics m4 = Sorters.quickSort(original.clone());
         printMetrics("Хоара (Quick)", m4);
+
+        System.out.println("-----------------------------------------------------------------------------");
     }
 
     // Простой вспомогательный вывод одной строки метрик

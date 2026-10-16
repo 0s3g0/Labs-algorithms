@@ -126,9 +126,7 @@ public class Sorters {
                 i++;
                 j--;
             }
-
         }
-
         if (low < j) quickSortRecursive(arr, low, j, metric);
         if (i < high) quickSortRecursive(arr, low, j, metric);
     }
@@ -150,7 +148,7 @@ public class Sorters {
 
     public static int getSum(int[] grades) {
         int sum = 0;
-        for (int g : grades) sum += g;
+        for (int s : grades) sum += s;
         return sum;
     }
 }
