@@ -4,7 +4,6 @@ public class Printer {
 
     public static void testAllSorters(String testName, int[] original) {
         System.out.println("Состояние: " + testName);
-        System.out.println("-----------------------------------------------------------------------------");
         System.out.printf("%-15s | %-12s | %-12s | %-12s | %-15s\n",
                 "Алгоритм", "Итерации", "Сравнения", "Перестановки", "Время");
 
@@ -24,7 +23,7 @@ public class Printer {
         SortMetrics m4 = Sorters.quickSort(original.clone());
         printMetrics("Хоара (Quick)", m4);
 
-        System.out.println("-----------------------------------------------------------------------------");
+        System.out.println("\n");
     }
 
     // Простой вспомогательный вывод одной строки метрик

@@ -108,13 +108,13 @@ public class Sorters {
                 i++;
                 metric.comparisons++;
             }
-            metric.comparisons++;// для последней неудавшейся проверки arr[i] < pivot
+            metric.comparisons++;
 
             while (arr[j] > pivot){
                 j--;
                 metric.comparisons++;
             }
-            metric.comparisons++;// для последней неудавшейся проверки arr[j] > pivot
+            metric.comparisons++;
 
             if (i <= j) {
                 if (i < j){
@@ -134,15 +134,15 @@ public class Sorters {
 
     public static void insertionSortStudentsDesc(int[][] students) {
         for (int i = 1; i < students.length; i++) {
-            int[] key = students[i];
-            int keySum = getSum(key);
+            int[] student = students[i];
+            int studentSum = getSum(student);
             int j = i - 1;
 
-            while (j >= 0 && getSum(students[j]) < keySum) {
+            while (j >= 0 && getSum(students[j]) < studentSum) {
                 students[j + 1] = students[j];
                 j--;
             }
-            students[j + 1] = key;
+            students[j + 1] = student;
         }
     }
 
