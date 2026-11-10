@@ -10,7 +10,7 @@ public class Task02 {
         int[][] students = new int[n][5]; // 5 - предметов
         Random rnd = new Random();
 
-        // Заполняем случайными баллами (например, от 40 до 100)
+        // Заполняем случайными баллами
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < 5; j++) {
                 students[i][j] = rnd.nextInt(0, 100);
@@ -22,13 +22,13 @@ public class Task02 {
 
         Sorters.insertionSortStudentsDesc(students);
 
-        System.out.println("\nПосле сортировки (по убыванию суммы)");
+        System.out.println("\nПосле сортировки");
         printStudents(students);
     }
 
     private static void printStudents(int[][] students) {
         for (int i = 0; i < students.length; i++) {
-            System.out.printf("Студент #%d: Экзамены %s | Сумма: %d\n",
+            System.out.printf("Студент #%d: Экзамены %-20s | Сумма: %d\n",
                     (i + 1), Arrays.toString(students[i]), Sorters.getSum(students[i]));
         }
     }
